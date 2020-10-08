@@ -16,6 +16,12 @@
  */
 'use strict'
 
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true}).then(() => {
+  console.log("DB CONNECTED")
+})
+
 const _ = require('lodash')
 const express = require('express')
 const bodyParser = require('body-parser')
